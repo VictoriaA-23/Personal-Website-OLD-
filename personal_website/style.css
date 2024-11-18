@@ -1,0 +1,90 @@
+body {background-color: black;
+    color: snow;
+    font-family: monospace;
+    font-size: 120%;
+}
+
+h1 {font-family: monospace;
+  font-size:300%;
+  color: #48c9b0;
+  border-style: double;
+  border-color: white;
+  border-width: 10px;
+}
+
+
+h3 {color: #40e0d0;
+}
+
+h4 {color: #5dade2;
+}
+
+p {color: snow;
+}
+
+.bold {
+  font-weight:bold;
+}
+
+th {font-style: bold;
+  color: #40e0d0;
+}
+
+a:link {color: #138d75;
+}
+a:visited {color: #138d75;
+}
+a:hover {color: #A3E4D7;
+}
+
+.FixedBox {
+  position: absolute;
+  top: 200px;
+  left: 30%;
+  width: 400px;
+  background-color: #000000;
+  border-width: 8px;
+  border-style: outset;
+  border-color: #81cdc6;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 12pt;
+  color: snow;
+}
+
+.header {
+  background-color: black;
+  color: #48c9b0;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 200px;
+  width: 100%;
+  
+}
+
+.BodyContainer {
+z-index: 0;
+  padding-top: 175px;
+  position: relative;
+  min-height: 100%;
+  
+}
+
+.anchor{
+ display:block;
+ height:200px; /* this is the height of your header */
+ margin-top:-200px; /* this is again negative value of the height of your header */
+ visibility:hidden;
+}
+
+.BodyContainer2 {
+z-index: 0;
+  padding-top: 175px;
+  position: relative;
+  min-height: 200px;
+  padding-right: -100px;
+}
+

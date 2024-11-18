@@ -1,0 +1,113 @@
+<html>
+<center>
+<div class = "header">
+<link rel = "stylesheet" href = "style.css" />
+<h1>Feel free to contact me at:</h1>
+
+</div>
+<script>
+function processForm()
+{
+	var e = document.thisForm.name.value + "\n" + document.thisForm.email.value
+	e = e + "\n\n" + document.thisForm.subject.value + "\n"
+	
+var p = ""
+	switch(document.thisForm.priority.value)
+	{
+		case "none":
+			p = "No priority selected..."
+			break
+		case "urgent":
+			p = "URGENT: Really serious stuff!"
+			break
+		case "high":
+			p = "Psst this is IMPORTANT!"
+			break
+		case "medium":
+			p = "Kind of important."
+			break
+		case "low":
+			p = "Eh take your time."
+			break
+	}
+	e = e + "Priority: " + p + "\n\n" + document.thisForm.message.value
+
+	document.thisForm.sentMessage.value = e
+}
+</script>
+
+
+<body>
+<div class = "BodyContainer2">
+<img src = "Images/phone.jpg" width = "100" height = "100"></img>
+<p>
+Phone: 100-200-4444
+<br>
+Email: <a href="mailto:victoriaa1@usf.edu?subject=Automatic%20Email&body=I%20love%20your%20website!">Victoriaa1@usf.edu</a>
+</p>
+</div>
+
+
+<form name = "thisForm">
+<table>
+
+<tr>
+<th col span = "2">CONTACT ME</th>
+</tr>
+
+<tr>
+<td>Name: </td>  <td><input type = "text" size = "40" name = "name"></td>
+</tr>
+
+<tr>
+<td>E-mail: </td>  <td><input type = "text" size = "40" name = "email"></td>
+</tr>
+
+<tr>
+<td>Subject: </td>  <td><input type = "text" size = "40" name = "subject"></td>
+</tr>
+
+<tr>
+<td>Priority: </td>
+
+<td>
+<select name = "priority" id = "priority">
+	<option value = "none">Choose a priority</option>
+	<option value = "urgent">URGENT</option>
+	<option value = "high">High</option>
+	<option value = "medium">Medium</option>
+	<option value = "low">Low</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td valign = "top">Message: </td> <td><textarea name = "message" rows = "4" cols = "40"></textarea></td>
+</tr>
+
+<tr>
+<td><input type = "reset" value = "Clear Form"></td>
+<td><input type = "button" value = "Send Message" onclick = "processForm()"></td>
+
+</tr>
+
+<tr>  <td><br><br></td>
+</tr>
+
+
+<tr>
+<th colospan = "2">If your message passes inspection, it will be displayed below:</th>
+</tr>
+
+<tr>
+<td valign = "top">Message Sent:</td>
+<td><textarea name = "sentMessage" rows = "12" cols = "40" readonly></textarea></td>
+</tr>
+
+</table>
+</form>
+
+
+</body>
+</center>
+</html>
